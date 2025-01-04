@@ -8,45 +8,115 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;700&display=swap');
         body { font-family: 'Heebo', sans-serif; }
+        .service-card {
+            transition: transform 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
     </style>
 </head>
 <body class="bg-gray-50">
     <header class="bg-white shadow-md">
         <div class="container mx-auto px-4 py-6">
-            <h1 class="text-4xl font-bold text-center">עולם הסלולר</h1>
+            <div class="flex justify-center items-center mb-4">
+                <img src="/api/placeholder/200/80?text=Logo" alt="עולם הסלולר" class="h-24 object-contain" />
+            </div>
             <p class="text-xl text-center mt-2">פתרונות תקשורת ומחשוב ברמה אחרת</p>
         </div>
     </header>
 
     <main class="container mx-auto px-4 py-8">
+        <!-- כרטיסי שירות -->
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            <div class="service-card bg-white rounded-lg shadow-lg overflow-hidden">
+                <img src="/api/placeholder/400/200?text=תיקון+סלולר" alt="תיקון סלולר" class="w-full h-48 object-cover"/>
+                <div class="p-4">
+                    <h3 class="text-xl font-bold mb-2">תיקוני סלולר</h3>
+                    <p class="text-gray-600 mb-4">תיקון מקצועי של כל סוגי מכשירי הסלולר</p>
+                    <button onclick="location.href='https://wa.me/972508555523?text=אשמח לפרטים על תיקון מכשיר סלולר'" 
+                            class="w-full bg-lime-500 hover:bg-lime-600 text-white py-2 px-4 rounded-lg transition-colors">
+                        הזמן תיקון
+                    </button>
+                </div>
+            </div>
+
+            <div class="service-card bg-white rounded-lg shadow-lg overflow-hidden">
+                <img src="/api/placeholder/400/200?text=הצלת+מכשירים" alt="הצלת מכשירים" class="w-full h-48 object-cover"/>
+                <div class="p-4">
+                    <h3 class="text-xl font-bold mb-2">הצלת מכשירים</h3>
+                    <p class="text-gray-600 mb-4">מתמחים בהצלת מכשירים מתים</p>
+                    <button onclick="location.href='https://wa.me/972508555523?text=אשמח לפרטים על הצלת מכשיר'" 
+                            class="w-full bg-lime-500 hover:bg-lime-600 text-white py-2 px-4 rounded-lg transition-colors">
+                        בירור נוסף
+                    </button>
+                </div>
+            </div>
+
+            <div class="service-card bg-white rounded-lg shadow-lg overflow-hidden">
+                <img src="/api/placeholder/400/200?text=העברת+נתונים" alt="העברת נתונים" class="w-full h-48 object-cover"/>
+                <div class="p-4">
+                    <h3 class="text-xl font-bold mb-2">העברת נתונים</h3>
+                    <p class="text-gray-600 mb-4">העברת נתונים מקצועית בין מכשירים</p>
+                    <button onclick="location.href='https://wa.me/972508555523?text=אשמח לפרטים על העברת נתונים'" 
+                            class="w-full bg-lime-500 hover:bg-lime-600 text-white py-2 px-4 rounded-lg transition-colors">
+                        לפרטים נוספים
+                    </button>
+                </div>
+            </div>
+
+            <div class="service-card bg-white rounded-lg shadow-lg overflow-hidden">
+                <img src="/api/placeholder/400/200?text=תיקון+קונסולות" alt="תיקון קונסולות" class="w-full h-48 object-cover"/>
+                <div class="p-4">
+                    <h3 class="text-xl font-bold mb-2">תיקון קונסולות</h3>
+                    <p class="text-gray-600 mb-4">תיקון מקצועי של קונסולות משחק</p>
+                    <button onclick="location.href='https://wa.me/972508555523?text=אשמח לפרטים על תיקון קונסולה'" 
+                            class="w-full bg-lime-500 hover:bg-lime-600 text-white py-2 px-4 rounded-lg transition-colors">
+                        הזמן תיקון
+                    </button>
+                </div>
+            </div>
+        </section>
+
         <section class="bg-white rounded-lg shadow-lg p-6 mb-8">
             <h2 class="text-2xl font-bold mb-4">צור קשר</h2>
             <div class="space-y-4">
-                <p>📞 טלפון: 0508555523</p>
-                <p>📍 כתובת: יוסף סמילו 3 נתיבות, רחבת השוק הישן</p>
-                <div>
-                    <p class="font-bold">שעות פעילות:</p>
-                    <p>ימי ראשון ושני: 10:00-17:00</p>
-                    <p>יום שלישי: 10:00-14:00</p>
-                    <p>ימי רביעי וחמישי: 10:00-17:00</p>
-                    <p>יום שישי: 10:00-14:00</p>
+                <div class="flex items-center">
+                    <div class="w-8 h-8 bg-lime-500 rounded-full flex items-center justify-center text-white mr-3">📞</div>
+                    <span>טלפון: 0508555523</span>
+                </div>
+                <div class="flex items-center">
+                    <div class="w-8 h-8 bg-lime-500 rounded-full flex items-center justify-center text-white mr-3">📍</div>
+                    <span>כתובת: יוסף סמילו 3 נתיבות, רחבת השוק הישן</span>
+                </div>
+                <div class="flex items-center">
+                    <div class="w-8 h-8 bg-lime-500 rounded-full flex items-center justify-center text-white mr-3">🕒</div>
+                    <div>
+                        <p class="font-bold">שעות פעילות:</p>
+                        <p>ימי ראשון ושני: 10:00-17:00</p>
+                        <p>יום שלישי: 10:00-14:00</p>
+                        <p>ימי רביעי וחמישי: 10:00-17:00</p>
+                        <p>יום שישי: 10:00-14:00</p>
+                    </div>
                 </div>
             </div>
         </section>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <a href="https://wa.me/972508555523" 
-               class="bg-green-500 text-white py-3 px-6 rounded-lg text-center hover:bg-green-600 transition-colors">
-                פתח צ'אט בווטסאפ
+               class="flex items-center justify-center bg-lime-500 hover:bg-lime-600 text-white py-4 px-6 rounded-lg text-center transition-colors">
+                <span class="text-xl">💬</span>
+                <span class="mr-2">פתח צ'אט בווטסאפ</span>
             </a>
             <a href="https://waze.com/ul?q=יוסף סמילו 3 נתיבות" 
-               class="bg-blue-500 text-white py-3 px-6 rounded-lg text-center hover:bg-blue-600 transition-colors">
-                נווט אלינו בווייז
+               class="flex items-center justify-center bg-blue-500 hover:bg-blue-600 text-white py-4 px-6 rounded-lg text-center transition-colors">
+                <span class="text-xl">🗺️</span>
+                <span class="mr-2">נווט אלינו בווייז</span>
             </a>
         </div>
     </main>
 
-    <footer class="bg-gray-800 text-white py-4 mt-8">
+    <footer class="bg-lime-500 text-white py-4 mt-8">
         <div class="container mx-auto px-4 text-center">
             <p>© 2024 כל הזכויות שמורות לעולם הסלולר</p>
         </div>

@@ -3,123 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>עולם הסלולר</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>עולם הסלולר - תיקון מכשירים</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;700&display=swap');
-        body { font-family: 'Heebo', sans-serif; }
-        .service-card {
-            transition: transform 0.3s ease;
+        @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700&display=swap');
+        
+        * {
+            font-family: 'Heebo', sans-serif;
         }
+
+        .service-card {
+            transition: transform 0.2s;
+        }
+
         .service-card:hover {
             transform: translateY(-5px);
+        }
+
+        .contact-button {
+            transition: all 0.3s;
+        }
+
+        .contact-button:hover {
+            transform: scale(1.02);
         }
     </style>
 </head>
 <body class="bg-gray-50">
-    <header class="bg-white shadow-md">
-        <div class="container mx-auto px-4 py-6">
-            <div class="flex justify-center items-center mb-4">
-                <img src="/api/placeholder/200/80?text=Logo" alt="עולם הסלולר" class="h-24 object-contain" />
-            </div>
-            <p class="text-xl text-center mt-2">פתרונות תקשורת ומחשוב ברמה אחרת</p>
-        </div>
-    </header>
+    <div class="max-w-2xl mx-auto p-4">
+        <!-- Header -->
+        <header class="text-center my-8">
+            <h1 class="text-3xl font-bold">עולם הסלולר</h1>
+            <p class="text-gray-600 mt-2">פתרונות תיקשורת ומחשוב ברמה אחרת</p>
+        </header>
 
-    <main class="container mx-auto px-4 py-8">
-        <!-- כרטיסי שירות -->
-        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-            <div class="service-card bg-white rounded-lg shadow-lg overflow-hidden">
-                <img src="/api/placeholder/400/200?text=תיקון+סלולר" alt="תיקון סלולר" class="w-full h-48 object-cover"/>
-                <div class="p-4">
-                    <h3 class="text-xl font-bold mb-2">תיקוני סלולר</h3>
-                    <p class="text-gray-600 mb-4">תיקון מקצועי של כל סוגי מכשירי הסלולר</p>
-                    <button onclick="location.href='https://wa.me/972508555523?text=אשמח לפרטים על תיקון מכשיר סלולר'" 
-                            class="w-full bg-lime-500 hover:bg-lime-600 text-white py-2 px-4 rounded-lg transition-colors">
-                        הזמן תיקון
-                    </button>
-                </div>
+        <!-- Services Section -->
+        <section class="space-y-6">
+            <!-- תיקון סלולר -->
+            <div class="service-card bg-white rounded-lg shadow-lg p-6">
+                <h2 class="text-xl font-bold mb-3">תיקון סלולר</h2>
+                <p class="text-gray-600 mb-4">תיקון מקצועי של כל סוגי מכשירי הסלולר</p>
+                <button onclick="window.open('https://wa.me/972508555523', '_blank')" 
+                        class="contact-button w-full bg-green-500 text-white font-bold py-3 rounded-lg hover:bg-green-600">
+                    הזמן תיקון
+                </button>
             </div>
 
-            <div class="service-card bg-white rounded-lg shadow-lg overflow-hidden">
-                <img src="/api/placeholder/400/200?text=הצלת+מכשירים" alt="הצלת מכשירים" class="w-full h-48 object-cover"/>
-                <div class="p-4">
-                    <h3 class="text-xl font-bold mb-2">הצלת מכשירים</h3>
-                    <p class="text-gray-600 mb-4">מתמחים בהצלת מכשירים מתים</p>
-                    <button onclick="location.href='https://wa.me/972508555523?text=אשמח לפרטים על הצלת מכשיר'" 
-                            class="w-full bg-lime-500 hover:bg-lime-600 text-white py-2 px-4 rounded-lg transition-colors">
-                        בירור נוסף
-                    </button>
-                </div>
+            <!-- הצלת מכשירים -->
+            <div class="service-card bg-white rounded-lg shadow-lg p-6">
+                <h2 class="text-xl font-bold mb-3">הצלת מכשירים</h2>
+                <p class="text-gray-600 mb-4">מתמחים בהצלת מכשירים מנזקי מים ותקלות מורכבות</p>
+                <button onclick="window.open('https://wa.me/972508555523', '_blank')"
+                        class="contact-button w-full bg-blue-500 text-white font-bold py-3 rounded-lg hover:bg-blue-600">
+                    בירור נוסף
+                </button>
             </div>
 
-            <div class="service-card bg-white rounded-lg shadow-lg overflow-hidden">
-                <img src="/api/placeholder/400/200?text=העברת+נתונים" alt="העברת נתונים" class="w-full h-48 object-cover"/>
-                <div class="p-4">
-                    <h3 class="text-xl font-bold mb-2">העברת נתונים</h3>
-                    <p class="text-gray-600 mb-4">העברת נתונים מקצועית בין מכשירים</p>
-                    <button onclick="location.href='https://wa.me/972508555523?text=אשמח לפרטים על העברת נתונים'" 
-                            class="w-full bg-lime-500 hover:bg-lime-600 text-white py-2 px-4 rounded-lg transition-colors">
-                        לפרטים נוספים
-                    </button>
-                </div>
+            <!-- העברת נתונים -->
+            <div class="service-card bg-white rounded-lg shadow-lg p-6">
+                <h2 class="text-xl font-bold mb-3">העברת נתונים</h2>
+                <p class="text-gray-600 mb-4">העברת נתונים מקצועית בין מכשירים</p>
+                <button onclick="window.open('https://wa.me/972508555523', '_blank')"
+                        class="contact-button w-full bg-green-500 text-white font-bold py-3 rounded-lg hover:bg-green-600">
+                    לפרטים נוספים
+                </button>
             </div>
 
-            <div class="service-card bg-white rounded-lg shadow-lg overflow-hidden">
-                <img src="/api/placeholder/400/200?text=תיקון+קונסולות" alt="תיקון קונסולות" class="w-full h-48 object-cover"/>
-                <div class="p-4">
-                    <h3 class="text-xl font-bold mb-2">תיקון קונסולות</h3>
-                    <p class="text-gray-600 mb-4">תיקון מקצועי של קונסולות משחק</p>
-                    <button onclick="location.href='https://wa.me/972508555523?text=אשמח לפרטים על תיקון קונסולה'" 
-                            class="w-full bg-lime-500 hover:bg-lime-600 text-white py-2 px-4 rounded-lg transition-colors">
-                        הזמן תיקון
-                    </button>
-                </div>
+            <!-- תיקון קונסולות -->
+            <div class="service-card bg-white rounded-lg shadow-lg p-6">
+                <h2 class="text-xl font-bold mb-3">תיקון קונסולות</h2>
+                <p class="text-gray-600 mb-4">תיקון מקצועי של קונסולות משחק</p>
+                <button onclick="window.open('https://wa.me/972508555523', '_blank')"
+                        class="contact-button w-full bg-green-500 text-white font-bold py-3 rounded-lg hover:bg-green-600">
+                    הזמן תיקון
+                </button>
             </div>
         </section>
 
-        <section class="bg-white rounded-lg shadow-lg p-6 mb-8">
-            <h2 class="text-2xl font-bold mb-4">צור קשר</h2>
-            <div class="space-y-4">
-                <div class="flex items-center">
-                    <div class="w-8 h-8 bg-lime-500 rounded-full flex items-center justify-center text-white mr-3">📞</div>
-                    <span>טלפון: 0508555523</span>
-                </div>
-                <div class="flex items-center">
-                    <div class="w-8 h-8 bg-lime-500 rounded-full flex items-center justify-center text-white mr-3">📍</div>
-                    <span>כתובת: יוסף סמילו 3 נתיבות, רחבת השוק הישן</span>
-                </div>
-                <div class="flex items-center">
-                    <div class="w-8 h-8 bg-lime-500 rounded-full flex items-center justify-center text-white mr-3">🕒</div>
-                    <div>
-                        <p class="font-bold">שעות פעילות:</p>
-                        <p>ימי ראשון ושני: 10:00-17:00</p>
-                        <p>יום שלישי: 10:00-14:00</p>
-                        <p>ימי רביעי וחמישי: 10:00-17:00</p>
-                        <p>יום שישי: 10:00-14:00</p>
+        <!-- Contact Section -->
+        <section class="bg-white rounded-lg shadow-lg p-6 mt-6">
+            <h2 class="text-xl font-bold mb-4">צור קשר</h2>
+            
+            <!-- Phone -->
+            <div class="flex justify-between items-center mb-3">
+                <a href="tel:0508555523" class="text-blue-600 hover:underline">0508555523</a>
+                <span>טלפון:</span>
+            </div>
+            
+            <!-- Address -->
+            <div class="flex justify-between items-center mb-6">
+                <span>יוסף סמילו 3 נתיבות, רחבת השוק הישן</span>
+            </div>
+            
+            <!-- Business Hours -->
+            <div class="mb-6">
+                <h3 class="font-bold mb-2">שעות פעילות:</h3>
+                <div class="space-y-2">
+                    <div class="flex justify-between">
+                        <span>10:00-17:00</span>
+                        <span>ימי ראשון ושני:</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span>10:00-14:00</span>
+                        <span>יום שלישי:</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span>10:00-17:00</span>
+                        <span>ימי רביעי וחמישי:</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span>10:00-14:00</span>
+                        <span>יום שישי:</span>
                     </div>
                 </div>
             </div>
+
+            <!-- Contact Buttons -->
+            <div class="grid grid-cols-2 gap-4">
+                <button onclick="window.open('https://wa.me/972508555523', '_blank')"
+                        class="contact-button bg-green-500 text-white font-bold py-3 px-4 rounded-lg hover:bg-green-600 w-full">
+                    פתח צ'אט בוואטסאפ
+                </button>
+                <button onclick="window.open('https://waze.com/ul?q=יוסף סמילו 3 נתיבות', '_blank')"
+                        class="contact-button bg-blue-500 text-white font-bold py-3 px-4 rounded-lg hover:bg-blue-600 w-full">
+                    נווט אלינו בווייז
+                </button>
+            </div>
         </section>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <a href="https://wa.me/972508555523" 
-               class="flex items-center justify-center bg-lime-500 hover:bg-lime-600 text-white py-4 px-6 rounded-lg text-center transition-colors">
-                <span class="text-xl">💬</span>
-                <span class="mr-2">פתח צ'אט בווטסאפ</span>
-            </a>
-            <a href="https://waze.com/ul?q=יוסף סמילו 3 נתיבות" 
-               class="flex items-center justify-center bg-blue-500 hover:bg-blue-600 text-white py-4 px-6 rounded-lg text-center transition-colors">
-                <span class="text-xl">🗺️</span>
-                <span class="mr-2">נווט אלינו בווייז</span>
-            </a>
-        </div>
-    </main>
+        <!-- Footer -->
+        <footer class="text-center text-gray-500 text-sm mt-8 pb-4">
+            © 2024 כל הזכויות שמורות לעולם הסלולר
+        </footer>
+    </div>
 
-    <footer class="bg-lime-500 text-white py-4 mt-8">
-        <div class="container mx-auto px-4 text-center">
-            <p>© 2024 כל הזכויות שמורות לעולם הסלולר</p>
-        </div>
-    </footer>
+    <script>
+        // Add smooth scroll behavior
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>

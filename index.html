@@ -28,14 +28,61 @@
         .contact-button:hover {
             transform: scale(1.02);
         }
+
+        .custom-green {
+            background-color: #90C641;
+        }
+
+        .custom-green:hover {
+            background-color: #7DAF35;
+        }
+
+        .logo-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .logo-container img {
+            width: 100%;
+            height: auto;
+        }
+
+        .accent-text {
+            color: #FF0000;
+        }
     </style>
 </head>
 <body class="bg-gray-50">
     <div class="max-w-2xl mx-auto p-4">
-        <!-- Header -->
+        <!-- Header with Logo -->
         <header class="text-center my-8">
-            <h1 class="text-3xl font-bold">עולם הסלולר</h1>
-            <p class="text-gray-600 mt-2">פתרונות תיקשורת ומחשוב ברמה אחרת</p>
+            <div class="logo-container mb-6">
+                <svg viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg">
+                    <!-- אנדרואיד -->
+                    <g transform="translate(20,30)">
+                        <circle cx="60" cy="60" r="60" fill="#90C641"/>
+                        <rect x="25" y="40" width="70" height="20" fill="#90C641"/>
+                        <circle cx="35" cy="45" r="5" fill="#333"/>
+                        <circle cx="85" cy="45" r="5" fill="#333"/>
+                        <path d="M 25 60 Q 60 90 95 60" fill="none" stroke="#333" stroke-width="3"/>
+                        <!-- אוזניות -->
+                        <path d="M 15 40 Q 5 30 5 60 L 5 70 L 15 70 L 15 40" fill="#ccc"/>
+                        <path d="M 105 40 Q 115 30 115 60 L 115 70 L 105 70 L 105 40" fill="#ccc"/>
+                        <!-- תג אדום -->
+                        <rect x="20" y="85" width="80" height="30" rx="5" fill="#FF0000"/>
+                        <text x="30" y="105" fill="white" font-size="12">מעבדת תיקונים</text>
+                        <text x="35" y="115" fill="white" font-size="12">מקצועית בקרוב</text>
+                    </g>
+                    <!-- טקסט -->
+                    <text x="200" y="100" font-size="80" font-weight="bold">
+                        <tspan fill="#000">עולם ה</tspan>
+                        <tspan fill="#FF0000">סלולר</tspan>
+                    </text>
+                    <!-- סלוגן -->
+                    <rect x="200" y="120" width="580" height="50" rx="25" fill="#90C641"/>
+                    <text x="250" y="152" fill="white" font-size="24">פתרונות תקשורת ומחשוב ברמה אחרת</text>
+                </svg>
+            </div>
         </header>
 
         <!-- Services Section -->
@@ -45,7 +92,7 @@
                 <h2 class="text-xl font-bold mb-3">תיקון סלולר</h2>
                 <p class="text-gray-600 mb-4">תיקון מקצועי של כל סוגי מכשירי הסלולר</p>
                 <button onclick="window.open('https://wa.me/972508555523', '_blank')" 
-                        class="contact-button w-full bg-green-500 text-white font-bold py-3 rounded-lg hover:bg-green-600">
+                        class="contact-button w-full custom-green text-white font-bold py-3 rounded-lg">
                     הזמן תיקון
                 </button>
             </div>
@@ -55,7 +102,7 @@
                 <h2 class="text-xl font-bold mb-3">הצלת מכשירים</h2>
                 <p class="text-gray-600 mb-4">מתמחים בהצלת מכשירים מנזקי מים ותקלות מורכבות</p>
                 <button onclick="window.open('https://wa.me/972508555523', '_blank')"
-                        class="contact-button w-full bg-blue-500 text-white font-bold py-3 rounded-lg hover:bg-blue-600">
+                        class="contact-button w-full custom-green text-white font-bold py-3 rounded-lg">
                     בירור נוסף
                 </button>
             </div>
@@ -65,7 +112,7 @@
                 <h2 class="text-xl font-bold mb-3">העברת נתונים</h2>
                 <p class="text-gray-600 mb-4">העברת נתונים מקצועית בין מכשירים</p>
                 <button onclick="window.open('https://wa.me/972508555523', '_blank')"
-                        class="contact-button w-full bg-green-500 text-white font-bold py-3 rounded-lg hover:bg-green-600">
+                        class="contact-button w-full custom-green text-white font-bold py-3 rounded-lg">
                     לפרטים נוספים
                 </button>
             </div>
@@ -75,7 +122,7 @@
                 <h2 class="text-xl font-bold mb-3">תיקון קונסולות</h2>
                 <p class="text-gray-600 mb-4">תיקון מקצועי של קונסולות משחק</p>
                 <button onclick="window.open('https://wa.me/972508555523', '_blank')"
-                        class="contact-button w-full bg-green-500 text-white font-bold py-3 rounded-lg hover:bg-green-600">
+                        class="contact-button w-full custom-green text-white font-bold py-3 rounded-lg">
                     הזמן תיקון
                 </button>
             </div>
@@ -87,7 +134,7 @@
             
             <!-- Phone -->
             <div class="flex justify-between items-center mb-3">
-                <a href="tel:0508555523" class="text-blue-600 hover:underline">0508555523</a>
+                <a href="tel:0508555523" class="accent-text hover:underline">0508555523</a>
                 <span>טלפון:</span>
             </div>
             
@@ -122,7 +169,7 @@
             <!-- Contact Buttons -->
             <div class="grid grid-cols-2 gap-4">
                 <button onclick="window.open('https://wa.me/972508555523', '_blank')"
-                        class="contact-button bg-green-500 text-white font-bold py-3 px-4 rounded-lg hover:bg-green-600 w-full">
+                        class="contact-button custom-green text-white font-bold py-3 px-4 rounded-lg w-full">
                     פתח צ'אט בוואטסאפ
                 </button>
                 <button onclick="window.open('https://waze.com/ul?q=יוסף סמילו 3 נתיבות', '_blank')"

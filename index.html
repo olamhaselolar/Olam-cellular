@@ -107,71 +107,47 @@
         </section>
 
         <!-- Contact Section -->
-        <section class="bg-white rounded-lg shadow-lg p-6 mt-6">
-            <h2 class="text-xl font-bold mb-4">צור קשר</h2>
-            
-            <!-- Phone -->
-            <div class="flex justify-between items-center mb-3">
-                <a href="tel:0508555523" class="accent-text hover:underline">0508555523</a>
-                <span>טלפון:</span>
+<section class="bg-white rounded-lg shadow-lg p-6 mt-6">
+    <h2 class="text-xl font-bold mb-4">צור קשר</h2>
+    
+    <!-- Phone -->
+    <div class="flex justify-between items-center mb-3">
+        <span>טלפון: 0508555523</span>
+    </div>
+    
+    <!-- Address -->
+    <div class="flex justify-between items-center mb-6">
+        <span>כתובת: יוסף סמילו 3 נתיבות, רחבת השוק הישן</span>
+    </div>
+    
+    <!-- Business Hours -->
+    <div class="mb-6">
+        <h3 class="font-bold mb-2">שעות פעילות:</h3>
+        <div class="space-y-2">
+            <div class="flex justify-end">
+                <span>ימי ראשון ושני: 10:00-17:00</span>
             </div>
-            
-            <!-- Address -->
-            <div class="flex justify-between items-center mb-6">
-                <span>יוסף סמילו 3 נתיבות, רחבת השוק הישן</span>
+            <div class="flex justify-end">
+                <span>יום שלישי: 10:00-14:00</span>
             </div>
-            
-            <!-- Business Hours -->
-            <div class="mb-6">
-                <h3 class="font-bold mb-2">שעות פעילות:</h3>
-                <div class="space-y-2">
-                    <div class="flex justify-between">
-                        <span>10:00-17:00</span>
-                        <span>ימי ראשון ושני:</span>
-                    </div>
-                    <div class="flex justify-between">
-                        <span>10:00-14:00</span>
-                        <span>יום שלישי:</span>
-                    </div>
-                    <div class="flex justify-between">
-                        <span>10:00-17:00</span>
-                        <span>ימי רביעי וחמישי:</span>
-                    </div>
-                    <div class="flex justify-between">
-                        <span>10:00-14:00</span>
-                        <span>יום שישי:</span>
-                    </div>
-                </div>
+            <div class="flex justify-end">
+                <span>ימי רביעי וחמישי: 10:00-17:00</span>
             </div>
-
-            <!-- Contact Buttons -->
-            <div class="grid grid-cols-2 gap-4">
-                <button onclick="window.open('https://wa.me/972508555523', '_blank')"
-                        class="contact-button custom-green text-white font-bold py-3 px-4 rounded-lg w-full">
-                    פתח צ'אט בוואטסאפ
-                </button>
-                <button onclick="window.open('https://waze.com/ul?q=יוסף סמילו 3 נתיבות', '_blank')"
-                        class="contact-button custom-green text-white font-bold py-3 px-4 rounded-lg w-full">
-                    נווט אלינו בווייז
-                </button>
+            <div class="flex justify-end">
+                <span>יום שישי: 10:00-14:00</span>
             </div>
-        </section>
-
-        <!-- Footer -->
-        <footer class="text-center text-gray-500 text-sm mt-8 pb-4">
-            © 2024 כל הזכויות שמורות לעולם הסלולר
-        </footer>
+        </div>
     </div>
 
-    <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
-</body>
-</html>
+    <!-- Contact Buttons -->
+    <div class="grid grid-cols-2 gap-4">
+        <button onclick="window.open('https://wa.me/972508555523', '_blank')"
+                class="contact-button custom-green text-white font-bold py-3 px-4 rounded-lg w-full">
+            פתח צ'אט בוואטסאפ
+        </button>
+        <button onclick="window.open('https://waze.com/ul?q=יוסף סמילו 3 נתיבות', '_blank')"
+                class="contact-button custom-green text-white font-bold py-3 px-4 rounded-lg w-full">
+            נווט אלינו בווייז
+        </button>
+    </div>
+</section>
